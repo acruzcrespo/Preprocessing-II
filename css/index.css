@@ -1,3 +1,18 @@
+.buttoned {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 4px 2px;
+  padding: 10px 27px;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: #17A2B8;
+}
+.buttoned:hover {
+  background-color: white;
+  color: #17A2B8;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -157,7 +172,7 @@ h4 {
 p {
   line-height: 1.5;
   font-size: 1.6rem;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 img {
   max-width: 100%;
@@ -167,6 +182,25 @@ img {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+.navigation nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 10px;
+}
+.navigation nav a {
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.6rem;
+  color: black;
 }
 .footer {
   width: 100%;
@@ -179,21 +213,28 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home .content-section {
+.home header {
+  border-top: 3px dashed silver;
+  border-bottom: 3px dashed silver;
+}
+.home header h2 {
+  margin-top: 20px;
+}
+.home  .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.home .content-section .text-content {
+.home  .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
-.home .content-section .img-content {
+.home  .content-section .img-content {
   width: 48%;
   padding-left: 1%;
 }
-.home .content-section .img-content img {
+.home  .content-section .img-content img {
   border-radius: 10px;
 }
 .home .inverse-content {
