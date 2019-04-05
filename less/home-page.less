@@ -1,14 +1,18 @@
 .home {
 
-  header {
+  .intro {
+    padding: 90px 0 10px;
+    border-bottom: 2px dashed @navigation-border;
 
-    border-top: 3px dashed silver;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
     h2 {
       margin-top: 20px;
     }
 
-    border-bottom: 3px dashed silver;
   } 
 
   .content-section {
@@ -17,26 +21,34 @@
     flex-wrap: wrap;
     justify-content: space-between;
     
-    @media(max-width: 500px){
-        width: 100%;
-          display: flex;
-          flex-direction: column;
-      }
-    
-
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+        padding: 0;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+          padding: 0;
+        }
       }
     }
   }
@@ -49,17 +61,29 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        order: 1;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        order: 2;
+      }
     }
   }
   
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -76,50 +100,22 @@
     display: flex;
     justify-content: space-between;
    
+    @media @mobile {
+      flex-wrap: wrap;
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width:80%;
+        margin: 0 auto 30px;
+      }
     }
   }
  
 }
 // home
 
-@media(max-width: 500px){
-  .content-section {
-    width: 100%;
-      display: flex;
-      flex-direction: column;
-  }
-}
 
-@media(max-width: 500px){
-  .text-content {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-  }
-}
-
-@media(max-width: 500px){
-  .img-content {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-  }
-}
-
-@media(max-width: 500px){
-  .img-content {
-      width: 90%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-  }
-}
